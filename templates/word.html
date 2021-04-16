@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}{{ results.word | title }} | Definition of {{ results.word | title }} by My Dictionary{% endblock %}
+{% block img %}<img class="profile-image mb-3 rounded-circle mx-auto" src="{% static 'assets/images/dictionary.jpg' %}" alt="{{ results.word | title }} | Definition of {{ results.word | title }} by Ging Dictionary" >{% endblock %}
+{% block content %}
+<div>
+    <h2 align="center"> {{ results.word | title }} </h2>
+    <br>
+    <p>
+        <b>Meaning: </b>{{results.meaning}}
+    </p>
+    
+</div>
+{% endblock %}
